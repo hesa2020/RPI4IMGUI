@@ -81,8 +81,16 @@ int main(int, char**)
     ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
     // Main loop
+    double TARGET_FPS = 30;
+
+    double lasttime = glfwGetTime();
     while (!glfwWindowShouldClose(window))
     {
+        while (glfwGetTime() < lasttime + 1.0 / TARGET_FPS)
+        {
+            _sleep(10);
+        }
+        lasttime += 1.0 / TARGET_FPS;
         // Poll and handle events (inputs, window resize, etc.)
         // You can read the io.WantCaptureMouse, io.WantCaptureKeyboard flags to tell if dear imgui wants to use your inputs.
         // - When io.WantCaptureMouse is true, do not dispatch mouse input data to your main application.
