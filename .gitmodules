@@ -1,0 +1,19 @@
+[submodule "glfw"]
+	path = thirdparty/glfw
+	url = https://github.com/glfw/glfw.git
+	branch = 3.3-stable
+
+[submodule "freetype"]
+	path = thirdparty/freetype
+	url = https://github.com/freetype/freetype.git
+	branch = master
+
+[submodule "imgui"]
+	path = thirdparty/imgui
+	url = https://github.com/ocornut/imgui.git
+	branch = master
+
+[submodule "implot"]
+	path = thirdparty/implot
+	url = https://github.com/epezent/implot.git
+	branch = master
