@@ -1,9 +1,3 @@
-[submodule "thirdparty/glfw"]
-	path = thirdparty/glfw
-	url = https://github.com/glfw/glfw.git
-[submodule "thirdparty/freetype"]
-	path = thirdparty/freetype
-	url = https://github.com/freetype/freetype.git
 [submodule "thirdparty/imgui"]
 	path = thirdparty/imgui
 	url = https://github.com/ocornut/imgui.git
