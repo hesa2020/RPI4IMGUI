@@ -6,7 +6,7 @@ find_package(OpenGL REQUIRED)
 
 #GLFW
 #For my windows i needed to manually set to "C:/Program Files (x86)/GLFW/lib/cmake/glfw3" in the cmake GUI
-find_package(glfw3 REQUIRED)
+find_package(glfw3 3.3.4 REQUIRED)
 
 # imgui
 add_library(imgui INTERFACE)
