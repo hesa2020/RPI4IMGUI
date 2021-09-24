@@ -11,6 +11,7 @@ find_package(glfw3 3.3.4 REQUIRED)
 # imgui
 add_library(imgui INTERFACE)
 set(imgui_root ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/imgui)
+
 target_sources(imgui INTERFACE
     $<BUILD_INTERFACE:${imgui_root}>/imgui.cpp
     $<BUILD_INTERFACE:${imgui_root}>/imgui_demo.cpp
@@ -20,7 +21,7 @@ target_sources(imgui INTERFACE
     #$<BUILD_INTERFACE:${imgui_root}>/misc/freetype/imgui_freetype.cpp
     $<BUILD_INTERFACE:${imgui_root}>/backends/imgui_impl_glfw.cpp
     $<BUILD_INTERFACE:${imgui_root}>/backends/imgui_impl_opengl2.cpp
-    $<BUILD_INTERFACE:${imgui_root}>/backends/imgui_impl_win32.cpp
+    $<$<PLATFORM_ID:Windows>:$<BUILD_INTERFACE:${imgui_root}>/backends/imgui_impl_win32.cpp> #Im not sure if we even need this with GLFW
 )
 target_include_directories(imgui INTERFACE
     $<BUILD_INTERFACE:${imgui_root}>
