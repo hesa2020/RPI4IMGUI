@@ -19,7 +19,7 @@ target_sources(imgui INTERFACE
     $<BUILD_INTERFACE:${imgui_root}>/imgui_widgets.cpp
     #$<BUILD_INTERFACE:${imgui_root}>/misc/freetype/imgui_freetype.cpp
     $<BUILD_INTERFACE:${imgui_root}>/backends/imgui_impl_sdl.cpp
-    $<BUILD_INTERFACE:${imgui_root}>/backends/imgui_impl_opengl2.cpp
+    $<BUILD_INTERFACE:${imgui_root}>/backends/imgui_impl_opengl3.cpp
 )
 target_include_directories(imgui INTERFACE
     $<BUILD_INTERFACE:${imgui_root}>
