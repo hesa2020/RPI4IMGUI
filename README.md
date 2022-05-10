@@ -1,5 +1,5 @@
 # RPI4IMGUI
-Working implementation for running imgui on a RasperryPI 4 Model B with SDL2 and OpenGL 3 ES2.
+Working implementation for running imgui on a RaspberryPI 4 Model B with SDL2 and OpenGL 3 ES2.
 
 It can be ran without a desktop environment and my touchscreen still works in this setup!
 
