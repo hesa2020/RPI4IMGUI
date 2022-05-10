@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.3)
-project(RPI4IMGUISDL2)
+project(main)
 
 #OpenGL
 find_package(OpenGL REQUIRED)
@@ -29,7 +29,7 @@ target_include_directories(imgui INTERFACE
 target_compile_definitions(imgui INTERFACE IMGUI_DISABLE_INCLUDE_IMCONFIG_H)
 
 ## Create main executable
-add_executable(main src/main.cpp)
+add_executable(${PROJECT_NAME} src/main.cpp)
 
 target_include_directories(main 
   PRIVATE
@@ -37,4 +37,4 @@ target_include_directories(main
     "${CMAKE_CURRENT_LIST_DIR}/src"
 )
 
-target_link_libraries(main PRIVATE ${OPENGL_gl_LIBRARY} ${SDL2_LIBRARIES} imgui)
+target_link_libraries(${PROJECT_NAME} PRIVATE ${OPENGL_gl_LIBRARY} SDL2::SDL2 SDL2::SDL2main imgui)
