@@ -1,7 +1,7 @@
 # RPI4IMGUI
 Working implementation for running imgui on a RasperryPI 4 Model 4.
 
-It can be ran without a desktop environment!
+It can be ran without a desktop environment and my touchscreen still works in this setup!
 
 I will eventually make a guide to explain how to install and run this project.
 
