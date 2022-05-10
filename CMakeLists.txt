@@ -56,6 +56,7 @@ add_executable(${PROJECT_NAME} src/main.cpp src/LTimer.cpp)
 target_include_directories(main 
   PRIVATE
     ${OPENGL_INCLUDE_DIR}
+    ${SDL2_INCLUDE_DIR}
     "${CMAKE_CURRENT_LIST_DIR}/src"
 )
 

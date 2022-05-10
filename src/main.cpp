@@ -3,7 +3,9 @@
 // If you are new to Dear ImGui, read documentation from the docs/ folder + read the top of imgui.cpp.
 // Read online: https://github.com/ocornut/imgui/tree/master/docs
 
+#ifndef WIN32
 #define IMGUI_IMPL_OPENGL_ES2
+#endif
 
 #include "imgui.h"
 #include "imgui_impl_sdl.h"
