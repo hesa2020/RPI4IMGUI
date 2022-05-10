@@ -4,6 +4,9 @@ project(RPI4IMGUISDL2)
 #OpenGL
 find_package(OpenGL REQUIRED)
 
+find_package(SDL2 REQUIRED)
+include_directories(${SDL2_INCLUDE_DIRS})
+
 # imgui
 add_library(imgui INTERFACE)
 set(imgui_root ${CMAKE_CURRENT_SOURCE_DIR}/thirdparty/imgui)
@@ -34,4 +37,4 @@ target_include_directories(main
     "${CMAKE_CURRENT_LIST_DIR}/src"
 )
 
-target_link_libraries(main PRIVATE ${OPENGL_gl_LIBRARY} imgui)
+target_link_libraries(main PRIVATE ${OPENGL_gl_LIBRARY} ${SDL2_LIBRARIES} imgui)
