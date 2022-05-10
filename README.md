@@ -9,12 +9,16 @@ I will eventually make a guide to explain how to install and run this project.
 
 # update pi kernel to latest
 sudo rpi-update
-# edit device configs:
-## dtoverlay=vc4-kms-v3d
-## max_framebuffers=2
+# edit device configs (1024x600 is my 7" monitor resolution):
+## framebuffer_width=1024
+## framebuffer_height=600
+## disable_overscan=1
+## hdmi_cvt=1024 600 60 3 0 0 0
 ## hdmi_force_hotplug=1
 ## hdmi_group=2
-## hdmi_mode=81
+## hdmi_mode=87
+## dtoverlay=vc4-kms-v3d
+## max_framebuffers=2
 sudo nano /boot/config.txt
 
 # reboot
