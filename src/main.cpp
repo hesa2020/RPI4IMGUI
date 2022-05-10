@@ -113,6 +113,9 @@ int main(int, char**)
     int countedFrames = 0;
     fpsTimer.start();
 
+    //Hide the cursor
+    SDL_ShowCursor(SDL_DISABLE);
+
     // Main loop
     bool done = false;
     while (!done)
@@ -128,7 +131,7 @@ int main(int, char**)
         while (SDL_PollEvent(&event))
         {
             ImGui_ImplSDL2_ProcessEvent(&event);
-            printf("Received event\n");
+            // printf("Received event\n");
             if (event.type == SDL_QUIT)
                 done = true;
             if (event.type == SDL_WINDOWEVENT && event.window.event == SDL_WINDOWEVENT_CLOSE && event.window.windowID == SDL_GetWindowID(window))
@@ -142,7 +145,7 @@ int main(int, char**)
             avgFPS = 0;
         }
 
-        std::cout << "fps: " << avgFPS << std::endl;
+        // std::cout << "fps: " << avgFPS << std::endl;
         // Start the Dear ImGui frame
         ImGui_ImplOpenGL3_NewFrame();
         ImGui_ImplSDL2_NewFrame();
