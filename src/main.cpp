@@ -3,7 +3,7 @@
 // If you are new to Dear ImGui, read documentation from the docs/ folder + read the top of imgui.cpp.
 // Read online: https://github.com/ocornut/imgui/tree/master/docs
 
-#ifndef WIN32
+#if !defined(WIN32) && !defined(__MACH__) && !defined(__APPLE__)
 #define IMGUI_IMPL_OPENGL_ES2
 #endif
 
