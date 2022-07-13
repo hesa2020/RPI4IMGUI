@@ -35,7 +35,9 @@ sudo apt-get install libraspberrypi-dev raspberrypi-kernel-headers
 sudo cp libbcm_host.so /usr/lib/libbcm_host.so
 
 # install everything Debian uses to build SDL
-sudo sed -i 's/# deb-src/deb-src/' /etc/apt/sources.list
+Uncomment the deb-src lines in /etc/apt/sources.list
+
+sudo nano /etc/apt/sources.list
 
 sudo apt update
 
